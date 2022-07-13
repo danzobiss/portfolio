@@ -22,7 +22,7 @@
     --text-color-light: hsl(var(--hue), 8%, 75%);
     --text-color-lighten: hsl(var(--hue), 8%, 92%);
     --body-color: hsl(var(--hue), 100%, 99%);
-    --container-color: #fff;
+    --container-color: #FFFFFF;
     
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -35,7 +35,7 @@
 }
 
 @media screen and (min-width: 968px) {
-     :root {
+    :root {
         --h2-font-size: 1.5rem;
         --h3-font-size: 1.25rem;
         --normal-font-size: 1rem;
@@ -226,4 +226,96 @@ img {
 
 .button-gray:hover {
     background-color: var(--text-color-light);
+}
+
+
+/*========================== BUTTONS =========================*/
+.filters .content {
+    margin: 2rem 0 2.5rem;
+    background-color: var(--text-color-lighten);
+    padding: .375rem;
+    border-radius: .75rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: .5rem;
+}
+
+.filters-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    font-family: var(--body-font);
+    font-weight: 500;
+    border-radius: .75rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.filters-btn:hover {
+    background-color: var(--body-color);
+}
+
+
+/*========================== PROJECTS =========================*/
+.projects .card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.projects .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects .modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg,
+                hsla(var(--hue), 24%, 40%, .3) 0%,
+                hsla(var(--hue), 24%, 4%, 1) 95%);
+    display: grid;
+    align-items: flex-end;
+    padding: 1.5rem 1.25rem;
+    transition: .3s;
+}
+
+.projects .modal .projects-informations{
+    transition: .3s;
+    margin-bottom: calc(-1.5rem - 2.25rem);
+}
+
+.projects .subtitle,
+.projects .title {
+    color: #FFFFFF;
+}
+
+.projects .subtitle {
+    font-size: var(--smaller-font-size);
+}
+
+.projects .title {
+    font-size: var(--h3-font-size);
+    margin-bottom: .75rem;
+}
+
+.projects-btn {
+    padding: .5rem;
+    margin-top: .75rem;
+}
+
+.projects .card:hover .projects-informations {
+    margin-bottom: 0;
+}
+
+.projects .card:hover .projects-btn {
+    margin-top: 0;
 }
