@@ -56,6 +56,7 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    transition: .3s;
 }
 
 h1, h2, h3 {
@@ -455,4 +456,116 @@ body.dark-theme {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: hsl(var(--hue), 10%, 44%);
+}
+
+
+/*========================== BREAKPOINTS =========================*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+    .container {
+        margin: 0 1rem;
+    }
+
+    .profile .info {
+        column-gap: 1.5rem;
+    }
+
+    .profile .buttons {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .skills .box {
+        column-gap: 1rem;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+    .projects {
+        grid-template-columns: 332px;
+        justify-content: center;
+    }
+
+    .filters .content {
+        width: 332px;
+        margin: 3rem auto;
+    }
+}
+
+@media screen and (min-width: 776px) {
+    .projects,
+    .skills {
+        grid-template-columns: repeat(2, 332px);
+    }
+
+    .skills {
+        justify-content: center;
+        column-gap: 3rem;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 992px) {
+    .container {
+        margin: 0 auto;
+    }
+
+    .change-theme {
+        top: 2.5rem;
+        right: 2.5rem;
+    }
+
+    .profile {
+        padding-top: 4rem;
+    }
+
+    .profile .border {
+        width: 135px;
+        height: 135px;
+        margin-bottom: 1rem;
+    }
+
+    .profile .photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile .photo img {
+        width: 110px;
+        margin-bottom: -20px;
+    }
+
+    .profile .profession {
+        margin-bottom: 1.5rem;
+    }
+
+    .profile .info {
+        column-gap: 3rem;
+    }
+
+    .profile .info .description {
+        font-size: var(--small-font-size);
+    }
+
+    .profile .buttons {
+        column-gap: 2rem;
+    }
+
+    .projects {
+        gap: 2rem 3rem;
+    }
+
+    .projects .modal {
+        padding: 1.5rem;
+    }
+
+    .skills .title {
+        font-size: var(--normal-font-size);
+        margin-bottom: 2.5rem;
+    }
+
+    .footer .copy {
+        margin: 4.5rem 0 2.5rem;
+    }
 }
