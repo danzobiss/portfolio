@@ -1,3 +1,13 @@
+/*========================== DYNAMIC INFO =========================*/
+function calculateAge(birthday) { // birthday is a date
+    var ageDifMs = Date.now() - birthday;
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+const h3Years = document.getElementById('years-of-work');
+h3Years.textContent = calculateAge(new Date('2021-08-02'))
+
 /*========================== FILTERS TABS =========================*/
 const tabs = document.querySelectorAll('[data-target]');
 const tabContents = document.querySelectorAll('[data-content]');
